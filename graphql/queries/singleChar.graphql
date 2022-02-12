@@ -1,0 +1,25 @@
+query SingleChar($id: ID!) {
+  character(id: $id) {
+    id
+    name
+    status
+    species
+    type
+    gender
+    origin {
+      id
+      name
+    }
+    location {
+      id
+      name
+    }
+    image
+    episode {
+      id
+      name
+      episode
+    }
+    created
+  }
+}

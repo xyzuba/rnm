@@ -1,0 +1,20 @@
+query Charachters {
+  characters {
+    results {
+      id
+      name
+      status
+      species
+      type
+      gender
+      origin {
+        id
+        name
+      }
+      location {
+        id
+        name
+      }
+    }
+  }
+}
