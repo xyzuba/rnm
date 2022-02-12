@@ -205,7 +205,7 @@ export type QueryLocationsByIdsArgs = {
 export type CharachtersQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type CharachtersQuery = { __typename?: 'Query', characters?: { __typename?: 'Characters', results?: Array<{ __typename?: 'Character', id?: string | null, name?: string | null, status?: string | null, species?: string | null, type?: string | null, gender?: string | null, origin?: { __typename?: 'Location', id?: string | null, name?: string | null } | null, location?: { __typename?: 'Location', id?: string | null, name?: string | null } | null } | null> | null } | null };
+export type CharachtersQuery = { __typename?: 'Query', characters?: { __typename?: 'Characters', results?: Array<{ __typename?: 'Character', id?: string | null, name?: string | null, status?: string | null, species?: string | null, type?: string | null, gender?: string | null, image?: string | null, origin?: { __typename?: 'Location', id?: string | null, name?: string | null } | null, location?: { __typename?: 'Location', id?: string | null, name?: string | null } | null } | null> | null } | null };
 
 export type SingleCharQueryVariables = Exact<{
   id: Scalars['ID'];
@@ -819,6 +819,7 @@ export const CharachtersDocument = gql`
       species
       type
       gender
+      image
       origin {
         id
         name

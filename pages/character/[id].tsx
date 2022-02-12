@@ -13,13 +13,20 @@ const Character = () => {
     pause: routeVar === "-1",
   });
 
-  console.log(data?.character?.id);
-  console.log(routeVar);
+  if (!fetching && !data) {
+    return <div>No character</div>;
+  }
 
   return (
-    <div>
-      <div>{data?.character?.id}</div>
-    </div>
+    <main>
+      {fetching && !data ? (
+        <div>Loading...</div>
+      ) : (
+        <div>
+          <div>{data?.character?.id}</div>
+        </div>
+      )}
+    </main>
   );
 };
 
